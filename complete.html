@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://localhost:3000/todos',
+      success: function() {
+        console.log('Called when successful!');
+      },
+      error: function() {
+        console.log('Called on error!');
+      },
+      complete: function() {
+        console.log('Always called!');
+      }
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    var one = $.ajax({
+      url: 'http://localhost:3000/todos/1'
+    });
+
+    var two = $.ajax({
+      url: 'http://localhost:3000/todos/2'
+    });
+
+    $.when(one, two)
+    .then(function(one, two) {
+        console.log('Called when successful!');
+      }, function() {
+        console.log('Called on error!');
+      }
+    )
+    .always(function() {
+      console.log('Always called!');
+    });
+    /** You always have .done, .success, .fail **/
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

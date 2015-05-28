@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://localhost:3000/todos/',
+      method: 'POST',
+      error: function(xhr, text, error) {
+        console.log('Unforunately the request couldn\'t be made...');
+      }
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

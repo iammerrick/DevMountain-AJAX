@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://localhost:3000/todos/',
+      method: 'POST',
+      data: {
+        text: 'Graduate from DevMountain'
+      },
+      success: function(response) {
+        console.log(response);
+      }
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
