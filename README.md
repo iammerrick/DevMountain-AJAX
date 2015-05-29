@@ -27,3 +27,9 @@ done
 then
 always
 fail
+
+## Server Up And Running
+
+1. Install Node.js from nodejs.org
+2. cd <Directory>
+3. `npm start`

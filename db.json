@@ -2,11 +2,15 @@
   "todos": [
     {
       "id": 1,
-      "text": "Something else!"
+      "text": "DevMountain Rocks"
     },
     {
       "text": "Graduate from DevMountain",
       "id": 2
+    },
+    {
+      "text": "Graduate from DevMountain",
+      "id": 3
     }
   ]
 }

@@ -5,18 +5,24 @@
   <title></title>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
+
+    
     var one = $.ajax({
       url: 'http://localhost:3000/todos/1'
     });
 
     var two = $.ajax({
-      url: 'http://localhost:3000/todos/2'
+      url: 'http://localhost:3000/todos/',
+      method: 'POST',
+      data: {
+        text: 'Hello world!'
+      }
     });
 
     $.when(one, two)
     .then(function(one, two) {
         console.log('Called when successful!');
-      }, function() {
+      }, function(xhr, text, error) {
         console.log('Called on error!');
       }
     )

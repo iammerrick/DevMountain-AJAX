@@ -8,9 +8,7 @@
     $.ajax({
       url: 'http://localhost:3000/todos',
       dataFilter: function(response) {
-        var parsed = JSON.parse(response);
-        parsed[0].text = parsed[0].text.toUpperCase();
-        return JSON.stringify(parsed);
+        return JSON.stringify({ name: 'merrick' });
       },
       success: function(response) {
         console.log(response);

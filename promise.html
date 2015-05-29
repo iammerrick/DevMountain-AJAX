@@ -5,10 +5,11 @@
   <title></title>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
-    $.ajax({
+    var promise = $.ajax({
       url: 'http://localhost:3000/todos',
     })
-    .then(function() {
+
+    promise.then(function() {
         console.log('Called when successful!');
       }, function() {
         console.log('Called on error!');
@@ -16,6 +17,7 @@
     .always(function() {
       console.log('Always called!');
     });
+
     /** You always have .done, .success, .fail **/
   </script>
 </head>
